@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import joblib
 import pandas as pd
@@ -9,6 +10,8 @@ app = FastAPI(
     description="API to detect if a URL is Phishing or Legitimate using Machine Learning",
     version="1.0.0"
 )
+
+app.mount("/ui", StaticFiles(directory="static", html=True), name="static")
 
 class URLScanRequest(BaseModel):
     url: str
@@ -33,7 +36,7 @@ def extract_url_features(url: str) -> dict:
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the Phishing Detection API!"}
+    return {"message": "Welcome to the Phishing Detection API! Visit /ui to access the web interface."}
 
 @app.post("/api/v1/scan")
 def scan_url(request: URLScanRequest):
