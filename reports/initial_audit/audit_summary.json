@@ -1,0 +1,31 @@
+{
+  "source_sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+  "rows": 235795,
+  "columns": 56,
+  "quality_totals": {
+    "missing": 0,
+    "blank": 0,
+    "placeholder": 0,
+    "infinite": 0,
+    "negative": 0
+  },
+  "duplicates": {
+    "exact_duplicate_rows": 0,
+    "duplicate_rows_excluding_filename": 0,
+    "extra_url_records": 425,
+    "rows_in_repeated_urls": 850,
+    "conflicting_url_labels": 0,
+    "repeated_urls_with_different_features": 425
+  },
+  "groups": {
+    "unique_url_hosts": 220077,
+    "max_rows_per_host": 1197,
+    "recorded_domain_host_mismatch_rows": 36
+  },
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scikit-learn": "1.8.0"
+  }
+}

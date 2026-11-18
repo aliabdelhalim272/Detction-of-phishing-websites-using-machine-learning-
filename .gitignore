@@ -206,8 +206,12 @@ data/processed/*
 # 3. OS generated files
 .DS_Store
 
-# Analysis result tables are versioned; raw data remains local.
-!/reports/results/*.csv
+# Local Python environments and notebook state
 .venv/
 .venv-analysis/
 .ipynb_checkpoints/
+
+# Small, reproducible audit tables; datasets remain ignored.
+!/reports/initial_audit/*.csv
+!/reports/consistency_audit/*.csv
+!/reports/distributions/*.csv

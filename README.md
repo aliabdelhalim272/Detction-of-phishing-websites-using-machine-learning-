@@ -1,76 +1,73 @@
-# Detction-of-phishing-websites-using-machine-learning-
-An end-to-end Machine Learning system designed to detect phishing websites by analyzing URL features, powered by a real-time Backend API for instant URL scanning.
-# 🛡️ Detection of Phishing Websites using Machine Learning
+# Detection of Phishing Websites Using Machine Learning
 
-## 📖 About The Project
-This is a graduation project focused on cybersecurity and artificial intelligence. The system is designed to detect phishing URLs using Machine Learning algorithms. By extracting specific numerical and structural features from a given URL, our ML model classifies the link as either **Phishing (Malicious)** or **Legitimate (Safe)**.
+Bu repo phishing tespiti projesinin veri analizini ve ekip uygulamasını içerir.
+Şu anda ham veriyi anlamaya yönelik EDA aşamasındayız. Kaynak, yapı, kalite,
+tekrar ve grup bazlı ayrım kontrolleri notebook'ta uygulanır. Henüz satır
+silme, eksik doldurma, özellik seçimi veya model eğitimi uygulanmaz.
 
-## 👥 Team Members & Roles
-1. **Meltem Orhan** - Data & Feature Engineer
-2. **Halil Trabzon** - AI & ML Model Engineer
-3. **Aly Abdelhalim** - Backend & Integration Engineer
-
-## 🏗️ System Architecture
-The project is divided into three main pipelines:
-* **Data Pipeline:** Data collection, cleaning, and feature extraction (URL-based, Domain-based, and Page-based features).
-* **ML Pipeline:** Training and hyperparameter tuning of classification models (e.g., Random Forest, SVM).
-* **Backend & Integration:** A RESTful API built to serve the trained ML model and handle incoming URL scan requests.
-
-## 📁 Repository Structure
-* `data/`: Contains raw and processed data (Note: Large datasets are ignored by git).
-* `notebooks/`: Jupyter notebooks for data exploration and model training.
-* `src/`: Source code for feature extraction and the backend API.
-* `models/`: Exported trained ML models.
-* `docs/`: Project documentation and API specs.
-
-
-## Completed offline analysis
+## Dosya düzeni
 
 ```text
-notebooks/01_analysis_and_modeling.ipynb  # Executed analysis and model comparison
-data/raw/                              # Original CSV, ignored by Git
-data/processed/                        # Reserved for derived data, ignored by Git
-reports/analysis.html                  # Browser-readable notebook export
-reports/results/                       # Metrics, audits, split manifest and figures
-reports/presentation/                  # Presentation HTML and speaker notes
-scripts/prepare_project.py             # Rebuild notebook source (clears outputs)
-scripts/prepare_delivery.py            # Refresh HTML and presentation from saved results
-requirements-analysis.txt              # Verified analysis dependencies
+data/
+  raw/                 Orijinal veri; değiştirilmez
+  processed/           Bulgulara göre üretilecek işlenmiş veri
+notebooks/
+  01_eda.ipynb         EDA soruları, kontrolleri, bulguları ve yorumları
+src/
+  backend_api/         Ekibin mevcut API kodu
+reports/
+  figures/             Analizden üretilecek grafikler
+docs/                  Kaynak bilgisi, veri sözlüğü ve karar notları
+models/                Ekibin model dosyaları
+static/                Ekibin mevcut arayüzü
+requirements.txt       Mevcut uygulamanın bağımlılıkları
 ```
 
-Use Python 3.12 in a separate analysis environment. From the repository root:
+Notebook keşif ve açıklama içindir. Tekrar kullanılacak veri hazırlama ve
+özellik çıkarma fonksiyonları ihtiyaç doğduğunda `src/` altına taşınır.
+`docs/` tanımları ve gerekçeleri, `reports/` üretilmiş grafik ve teslim
+raporlarını içerir. İhtiyaç oluşmadan yeni klasör veya notebook kopyası eklenmez.
+
+## Başlangıç
+
+VS Code'da bu repo klasörünü açıp `notebooks/01_eda.ipynb` dosyasını kullanın.
+İlk yedi bölüm analiz kodu ve çıktıları içerir; 8–12. bölümler sonraki
+incelemelerin planıdır. 7. bölüm yalnızca eğitim verisinde tek değişkenli
+dağılımları inceler; tablolar `reports/distributions/`, grafikler
+`reports/figures/` altında saklanır. EDA için Python 3.12 ve `requirements-eda.txt`
+kullanılır; `requirements.txt` mevcut backend içindir.
 
 ```powershell
-python -m venv .venv-analysis
-.\.venv-analysis\Scripts\python.exe -m pip install -r requirements-analysis.txt
-.\.venv-analysis\Scripts\python.exe -m ipykernel install --user --name phishing-analysis --display-name "Python 3.12 (Phishing Analysis)"
+python -m pip install -r requirements-eda.txt
 ```
 
-Select that kernel and run `notebooks/01_analysis_and_modeling.ipynb` from the
-repository root or its notebooks directory. The committed notebook retains the
-previously executed results; only its file paths were updated during organization.
-Place `PhiUSIIL_Phishing_URL_Dataset.csv` in `data/raw/` before running it.
-No URLs are fetched during analysis. Run All regenerates `reports/results/`.
+İlgili Python ortamını notebook çekirdeği olarak seçip hücreleri sırayla çalıştırın.
+Repo kökünden veya `notebooks/` dizininden çalıştırılabilir.
+`reports/eda.html` kaydedilmiş çalışmanın tarayıcı görünümüdür; notebook yeniden
+çalıştırıldığında HTML kendiliğinden yenilenmez.
 
-After a successful notebook run, refresh the browser report and presentation:
+Kalite tabloları `reports/initial_audit/` altında, sabit ayrımın satır eşlemesi
+`data/processed/split_manifest.csv` ve ayarları `split_metadata.json` içinde
+tutulur. Bu klasörde henüz temizlenmiş veri seti yoktur. Ayrım kilidi mevcutsa
+notebook aynı kaynak, ayar ve satır ayrımını doğrular; farklıysa durur.
 
-```powershell
-.\.venv-analysis\Scripts\python.exe scripts/prepare_delivery.py
-```
+Önceki deneylerde bu veri kümesinin tamamı görülmüştür. Yeni ayrım ilerideki
+çalışmayı düzenler; geriye dönük hiç görülmemiş bir test kümesi oluşturmaz.
 
-`prepare_project.py` intentionally rebuilds the notebook without execution outputs;
-run it only when rebuilding, then execute the notebook before exporting.
-The exporter preserves this README and both dependency files.
-The root `requirements.txt` remains the existing backend dependency file.
+Her kontrolde soru, yöntem, bulgu, yorum/sınırlılık ve karar kaydedilir.
+Bağımsız model değerlendirmesi planlanıyorsa hedefe göre özellik seçimi ve
+öğrenilen dönüşümler öncesinde test kümesi ayrılır. Temizleme akışı
+bulgulardan sonra oluşturulur; ham veri yerinde değiştirilmez.
 
-Dataset: [PhiUSIIL, UCI](https://archive.ics.uci.edu/dataset/967/phiusiil%2Bphishing%2Burl%2Bdataset),
-Arvind Prasad and Shalini Chandra (2024), CC BY 4.0.
-Original label: 0 phishing, 1 legitimate. Analysis positive class: phishing (1).
-Data fingerprint and environment are in `reports/results/run_metadata.json`.
+## Veri kaynağı
 
-The offline models use 47 numeric features, including webpage-content features.
-The API currently extracts five URL features and falls back to heuristic rules
-when no model is available. The analyzed models are not integrated into the API.
-Observed-domain-separated internal scores do not establish temporal, campaign,
-registered-domain or external generalization. Feature definitions include inferred
-meanings; see the notebook for limitations and references.
+56 sütunun Türkçe açıklaması, kullanım grubu, kaynakları ve doğrulanma durumu
+[sütun sözlüğünde](docs/data_dictionary.md) bulunur. Aynı tablo notebook'un
+veri yapısı bölümünde de gösterilir; kesin formülü doğrulanmayanlar işaretlidir.
+
+PhiUSIIL Phishing URL (Website), Arvind Prasad ve Shalini Chandra (2024),
+[UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/967/phiusiil%2Bphishing%2Burl%2Bdataset), CC BY 4.0.
+
+Yerel kaynak: `data/raw/PhiUSIIL_Phishing_URL_Dataset.csv`.
+Kaynak etiketler: `0` phishing, `1` meşru. Ham ve işlenmiş CSV dosyaları
+mevcut `.gitignore` kurallarıyla Git dışında tutulur.
