@@ -1,0 +1,9 @@
+candidate_rule,matching_rows,mismatching_rows,match_percent
+HasObfuscation == (NoOfObfuscatedChar > 0),141254,0,100.0
+HasObfuscation == (ObfuscationRatio > 0),141254,0,100.0
+ObfuscationRatio == NoOfObfuscatedChar / recorded_URLLength,140946,308,99.78195307743498
+ObfuscationRatio == NoOfObfuscatedChar / actual_URL_characters,140943,311,99.77982924377363
+LetterRatioInURL == NoOfLettersInURL / recorded_URLLength,27891,113363,19.74528154954904
+LetterRatioInURL == NoOfLettersInURL / actual_URL_characters,4420,136834,3.129114927718861
+DegitRatioInURL == NoOfDegitsInURL / recorded_URLLength,113433,27821,80.30427456921574
+DegitRatioInURL == NoOfDegitsInURL / actual_URL_characters,111905,29349,79.22253529103601

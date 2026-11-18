@@ -1,0 +1,3 @@
+rule,mismatches
+parsed_scheme_is_https,271
+substring_https_anywhere,0

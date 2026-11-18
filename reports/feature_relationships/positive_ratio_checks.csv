@@ -1,0 +1,7 @@
+ratio,denominator,positive_count_rows,match_percent_among_positive
+ObfuscationRatio,recorded_URLLength,321,4.049844236760125
+ObfuscationRatio,actual_URL_characters,321,3.115264797507788
+LetterRatioInURL,recorded_URLLength,141215,19.723117232588606
+LetterRatioInURL,actual_URL_characters,141215,3.102361647133803
+DegitRatioInURL,recorded_URLLength,30894,9.946915258626271
+DegitRatioInURL,actual_URL_characters,30894,5.000971062342202

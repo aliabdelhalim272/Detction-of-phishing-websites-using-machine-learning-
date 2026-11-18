@@ -1,0 +1,67 @@
+{
+  "schema": "url_lexical_v1",
+  "status": "PROPOSED_NOT_IMPLEMENTED",
+  "feature_count": 14,
+  "features": [
+    {
+      "name": "url_length",
+      "definition": "Kabul edilen özgün URL metnindeki karakter sayısı"
+    },
+    {
+      "name": "hostname_length",
+      "definition": "Parser'ın çıkardığı küçük harf hostname uzunluğu; IPv6 köşeli parantezleri hariç"
+    },
+    {
+      "name": "has_at_symbol",
+      "definition": "Özgün girdide @ bulunması"
+    },
+    {
+      "name": "has_dash",
+      "definition": "Özgün girdide - bulunması"
+    },
+    {
+      "name": "count_dots",
+      "definition": "Özgün girdideki nokta sayısı; subdomain sayısı değildir"
+    },
+    {
+      "name": "has_https",
+      "definition": "Ayrıştırılmış şemanın küçük harf biçimi https ise 1"
+    },
+    {
+      "name": "digit_count",
+      "definition": "Özgün girdide ASCII 0–9 sayısı"
+    },
+    {
+      "name": "digit_ratio",
+      "definition": "digit_count / url_length"
+    },
+    {
+      "name": "path_length",
+      "definition": "Percent-decoding yapılmadan path uzunluğu"
+    },
+    {
+      "name": "query_length",
+      "definition": "Başındaki ? hariç query uzunluğu"
+    },
+    {
+      "name": "count_query_parameters",
+      "definition": "Query'deki boş olmayan & ile ayrılmış parçaların sayısı"
+    },
+    {
+      "name": "count_percent_escapes",
+      "definition": "Özgün girdide geçerli %HH dizilerinin sayısı"
+    },
+    {
+      "name": "hostname_is_ip",
+      "definition": "Standart IPv4/IPv6 literal hostname ise 1"
+    },
+    {
+      "name": "has_explicit_port",
+      "definition": "Geçerli açık port yazılmışsa 1"
+    }
+  ],
+  "target": "is_phishing = 1 - original_label",
+  "identity_fields_in_X": false,
+  "network_requests": false,
+  "deduplication": "Only after shared lexical X and y equality; exact URL; first source_row; preserve mapping and partition."
+}

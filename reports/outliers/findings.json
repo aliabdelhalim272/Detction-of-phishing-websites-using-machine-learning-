@@ -1,0 +1,18 @@
+{
+  "training_rows": 141254,
+  "nonbinary_columns_reviewed": 31,
+  "zero_iqr_columns": [
+    "NoOfSubDomain",
+    "NoOfObfuscatedChar",
+    "ObfuscationRatio",
+    "NoOfDegitsInURL",
+    "DegitRatioInURL",
+    "NoOfEqualsInURL",
+    "NoOfQMarkInURL",
+    "NoOfAmpersandInURL",
+    "NoOfPopup"
+  ],
+  "records_flagged_by_any_nondegenerate_iqr": 73484,
+  "logical_checks_with_flags": [],
+  "policy": "No rows removed, no winsorization, no training transformation."
+}

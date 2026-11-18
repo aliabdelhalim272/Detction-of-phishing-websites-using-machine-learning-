@@ -1,0 +1,17 @@
+topic,evidence,planned_action,rationale,status
+Ham veri,SHA-256 ve 235.795 kaynak kayıt; 2–4,Orijinali salt kaynak olarak koru; çıktıları ayrı üret,İzlenebilirlik ve yeniden üretim,Mevcut koruma sürer
+Eksik ve sonsuz değerler,Taranan alanlarda yok; 4,Bu sürümde doldurma uygulama; yeni veri için doğrulama ekle,Sorun yokken global imputation gereksiz,Planlandı
+Etiket,"Kaynak 0 phishing, 1 meşru; 2 ve 11",Teslimde is_phishing = 1 - label; orijinal etiketi metadata'da koru,API 1'i phishing yorumluyor; çift hedef girdiye giremez,Planlandı
+Tekrar URL,"425 ek kayıt, 850 gözlem; özellikler farklı, etiket çelişkisi yok; 5",URL-only çıktıda aynı extractor aynı girdiyi ürettikten sonra exact URL başına ilk kaynak satırını temsilci seç; tüm kaynak satırı eşlemesini sakla,Bu akışta aynı URL aynı yeni X ve y üretir. Kayıtlı içerik özellikleri için rastgele temsilci seçilmez,URL-only için planlandı
+Ayrım,Sabit host ayrımı ve örtüşme kontrolleri; 6,Var olan partition atamalarını koru; temsilci satır partition'ı devralır,Satır seçimi sonrası yeni seed arama yok,Planlandı
+Domain farkları,Eğitimde 18 hostname/netloc farkı; 6 ve 11,Ham Domain'i koru; hostname'i URL parser ile ayrı metadata alanı üret,Port ve userinfo hostname değildir; modelde host kimliği kullanma,Planlandı
+URLLength,Eğitimde 112.331 fark; 112.329'u -1; 6.2,Yeni url_length alanını mevcut girdinin karakter sayısı olarak açıkça hesapla,Eski sütunu sessizce düzeltme; -1 sebebi doğrulanmadı,Planlandı
+HTTPS,Şemayla 271 fark; metin içi https aramasıyla 0 fark; 11,Yeni has_https yalnız parsed scheme == https olsun,Sertifika doğrulaması veya güvenlik kararı değildir,Planlandı
+Karakter sayımı,"=, ?, & ve oran formüllerinde farklar; 6.2 ve 10",Yeni lexical sözleşmede sayılacak girdiyi ve karakterleri açık tanımla,Eski sayaç/ratio formüllerinin kopyalandığı iddia edilmez,Planlandı
+Referans skorları,Köken/formül/zaman belirsiz; 9 ve 11,"URL-only ilk teslim X'ine URLSimilarityIndex, TLDLegitimateProb, URLCharProb alma",Tedbir ve erişilebilirlik kararı; sızıntı kanıtı olduğu söylenmez,Planlandı
+Sayfa ve başlık alanları,API üretmiyor; kuvvetli sınıf farkları var; 9–11,"İlk URL-only X'ine içerik, başlık ve davranış alanlarını alma; kaynakta koru",Canlıda elde edilemeyen girdilerle model sözleşmesi kurulmaz,Planlandı
+Aykırı değerler,"9 sıfır-IQR alan; diğerlerinde en az bir eşik dışı %52,02; 8",Toplu IQR silme/kırpma yapma; açık doğrulama ihlallerini ayrı incele,İstatistiksel uçluk hata tanısı değildir,Planlandı
+Sıfır yoğunluğu / korelasyon,10 alan en az %95 sıfır; 7 yüksek korelasyon çifti; 7 ve 10,Sırf sıfır oranı/korelasyon nedeniyle sütun eleme yapma,Tanım ve canlı kullanılabilirlik önce gelir; model katkısı Rol 2'de,Planlandı
+TLD ve alt domain sayısı,Nadir kategoriler ve suffix kuralı belirsiz; 7 ve 11,İlk lexical sözleşmeye TLD encoding ve subdomain sayısı ekleme,Belgeli PSL/suffix politikası olmadan kestirme nokta sayımıyla taklit etme,İlk sürüm kapsam kararı
+Fitted preprocessing,Veri dönüşümü henüz fit edilmedi,Imputer/scaler/encoder/threshold seçimlerini Rol 2'ye bırak; yalnız train'de fit,Doğrulama/testten öğrenme yok,Rol 2 aktarımı
+API ve değerlendirme,"5 özellik, farklı hedef/özellik kuralları; 11",Ortak extractor ve hedef sürümüyle entegrasyon için teslim şartı yaz,API bu plan sırasında değiştirilmez; eski model tak-çalıştır değildir,Sonraki ekip işi

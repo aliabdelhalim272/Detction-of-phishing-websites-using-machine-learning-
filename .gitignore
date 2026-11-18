@@ -215,3 +215,8 @@ data/processed/*
 !/reports/initial_audit/*.csv
 !/reports/consistency_audit/*.csv
 !/reports/distributions/*.csv
+!/reports/outliers/*.csv
+!/reports/target_relationships/*.csv
+!/reports/feature_relationships/*.csv
+!/reports/provenance/*.csv
+!/reports/preparation_plan/*.csv
