@@ -1,0 +1,4 @@
+Model,True legitimate,False alarms,Missed phishing,Detected phishing,False alarm rate,Phishing miss rate
+Majority baseline,26923,0,19709,0,0.0,1.0
+Logistic Regression,26922,1,5,19704,3.714296326560933e-05,0.0002536912070627632
+Random Forest,26923,0,4,19705,0.0,0.00020295296565021057
