@@ -220,3 +220,4 @@ data/processed/*
 !/reports/feature_relationships/*.csv
 !/reports/provenance/*.csv
 !/reports/preparation_plan/*.csv
+!/reports/data_preparation/*.csv

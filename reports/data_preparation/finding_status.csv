@@ -1,0 +1,23 @@
+id,eda_finding,status,action_or_evidence,remaining_limit
+source,Raw data unchanged,applied_verified,"Source, split, EDA and backend hashes preserved",Original stays authoritative; no overwrite
+quality,Missing/nonfinite values,no_action_needed,No original missing/infinite cells; new X finite,"Future invalid input is rejected/quarantined, not imputed globally"
+target,Opposite source/API target convention,applied_verified,New is_phishing=1; original_label kept outside X,Backend integration is a separate open item
+duplicates,425 extra URL observations,applied_verified,235370 URL-only representatives; all source lineage retained,Old content observations were not adjudicated
+split,Group overlap,applied_verified,Original partitions inherited; no observed-host overlap,Registered-domain/campaign independence remains open
+url_length,Recorded URLLength mismatch,applied_verified_new_contract,New url_length matches original text length,Why the original differs by -1 remains unknown
+https,HTTPS indicator semantics,applied_verified_new_contract,New has_https uses parsed scheme,Original producer code not verified; no TLS certificate check
+domain,Netloc versus hostname,applied_verified_new_contract,Separate parsed hostname_group; port/userinfo classified,Original Domain retained; no registered-domain extraction
+digits,Digit count and ratio,applied_verified_new_contract,ASCII digit_count and documented denominator verified,Original ratio formula not reconstructed
+special_counts,Equals/question/ampersand mismatches,diagnostic_only_not_selected,Recomputed training counts and differences saved locally,These three counts are not in the 14-field model contract
+other_ratios,Letters/special/obfuscation formulas,excluded_not_resolved,Not used in first URL-only contract,"Original formulas, denominators and rounding remain unverified"
+reference,Three reference scores,excluded_not_resolved,Not in new X; source preserved,"Reference population, timing and label use unknown"
+content,Page/title/behavior features,excluded_not_resolved,Not in new X; source preserved,Original HTML/formulas and live retrieval contract needed
+outliers,Long tails/IQR flags,no_automatic_edit,No mass deletion or clipping,Extreme does not establish error; model transforms belong to Role 2
+sparsity,Zero-heavy fields,no_automatic_edit,No field dropped solely because it is sparse,Do not equate rare with invalid
+correlation,Seven strong feature pairs,no_automatic_edit,No correlation-threshold deletion,"Final new schema chosen by defined availability, not this threshold"
+tld,TLD/subdomain parsing,excluded_not_resolved,No category encoding or guessed subdomain count,Documented public-suffix policy needed
+fitting,Imputation/scaling/encoding,not_needed_at_this_stage,No learned transformation applied,Role 2 fits only training data if needed
+api,Shared extractor integration,open,New module exists; old API unchanged,Wire versioned schema/target with model team
+external,Prior exposure/external validation,open,"Limits documented, no independent-test claim",New external/temporal data required
+groups,Campaign/registered-domain dependence,open,Observed-host split only,Additional grouping audit required
+enrichment,Certificate validity/domain age,not_implemented,Not faked as zeros or safety flags,Separate network/data-source work

@@ -1,9 +1,10 @@
 # Detection of Phishing Websites Using Machine Learning
 
 Bu repo phishing tespiti projesinin veri analizini ve ekip uygulamasını içerir.
-Şu anda ham veriyi anlamaya yönelik EDA aşamasındayız. Kaynak, yapı, kalite,
-tekrar ve grup bazlı ayrım kontrolleri notebook'ta uygulanır. Henüz satır
-silme, eksik doldurma, özellik seçimi veya model eğitimi uygulanmaz.
+EDA tamamlandı; bulgulara dayanan URL-only veri hazırlama uygulaması ayrı
+notebook'ta yürütülür. Ham veri değiştirilmez. Sayfa özellikleri sessizce
+düzeltilmez; yeni lexical özellikler ortak modülle üretilir. Model eğitimi
+ve backend entegrasyonu bu çalışma kapsamında yapılmadı.
 
 ## Dosya düzeni
 
@@ -13,14 +14,18 @@ data/
   processed/           Bulgulara göre üretilecek işlenmiş veri
 notebooks/
   01_eda.ipynb         EDA soruları, kontrolleri, bulguları ve yorumları
+  02_data_preparation.ipynb  EDA kararlarının uygulanması ve çıktı doğrulaması
 src/
   backend_api/         Ekibin mevcut API kodu
+  data/                Veri hazırlama ve kaynak satırı eşlemesi
+  features/            Ortak, sürümlenmiş URL çıkarım modülü
 reports/
   figures/             Analizden üretilecek grafikler
 docs/                  Kaynak bilgisi, veri sözlüğü ve karar notları
 models/                Ekibin model dosyaları
 static/                Ekibin mevcut arayüzü
 requirements.txt       Mevcut uygulamanın bağımlılıkları
+tests/                 Çıkarım ve veri bütünlüğü testleri
 ```
 
 Notebook keşif ve açıklama içindir. Tekrar kullanılacak veri hazırlama ve
@@ -33,7 +38,8 @@ raporlarını içerir. İhtiyaç oluşmadan yeni klasör veya notebook kopyası 
 VS Code'da bu repo klasörünü açıp `notebooks/01_eda.ipynb` dosyasını kullanın.
 1–11. bölümler EDA kodu ve çıktıları, 12. bölüm kanıta dayalı hazırlık planı
 ve durum denetimini içerir. EDA akışı ve plan tamamlandı; veri hazırlama
-uygulaması henüz yapılmadı. 7. bölüm yalnızca eğitim verisinde tek değişkenli
+uygulaması `02_data_preparation.ipynb` içinde ayrıca yapılır. EDA notebook'u
+gerekçelerin kaydı olarak korunur. 7. bölüm yalnızca eğitim verisinde tek değişkenli
 dağılımları inceler; tablolar `reports/distributions/`, grafikler
 `reports/figures/` altında saklanır. EDA için Python 3.12 ve `requirements-eda.txt`
 kullanılır; `requirements.txt` mevcut backend içindir.
@@ -60,8 +66,38 @@ olarak okunur; uygulama çalıştırılmaz veya değiştirilmez.
 12. bölümdeki 16 karar başlığı, önerilen 14 alanlı URL-only sözleşmesi ve
 uygulama sırası [veri hazırlama planında](docs/data_preparation_plan.md)
 bulunur. Makinece okunabilir kararlar ve **henüz uygulanmamış** sözleşme
-`reports/preparation_plan/` altındadır. Bu çıktılar temizlenmiş veri veya
-çalışan özellik modülü değildir. İçerik tabanlı seçenek ayrıca ele alınmıştır.
+`reports/preparation_plan/` altında EDA'nın plan anındaki durumunu gösterir.
+Güncel uygulama çıktısı için `reports/data_preparation/summary.json` kullanılır.
+İçerik tabanlı seçenek ayrıca ele alınmıştır.
+
+## Veri hazırlamayı çalıştırma
+
+`02_data_preparation.ipynb` tek başına Run All ile çalışır; önce EDA notebook'unu
+aynı oturumda çalıştırmak gerekmez. Ham CSV ile EDA'da oluşturulmuş
+`data/processed/split_manifest.csv` ve `split_metadata.json` yerelde bulunmalıdır.
+Eksik veya değişmiş ayrım otomatik oluşturulmaz. Repo kökünden testleri çalıştırın:
+
+```powershell
+python -m unittest discover -s tests
+python src/features/url_features.py "https://example.com/login?id=1"
+```
+
+Çıktılar `data/processed/url_lexical_v1/` altında ayrı X, hedef, metadata,
+kaynak eşlemesi, karantina ve şema dosyalarıdır. `features.csv` içindeki
+`source_row` yalnız indeks/birleşim anahtarıdır; model için `schema.json`
+içindeki 14 alan açıkça seçilmelidir. Büyük CSV'ler Git dışında kalır.
+Teslimde yerel CSV dosyaları birlikte paylaşılmalıdır; Git checkout'u veriyi
+ve yerel ayrım dosyalarını tek başına sağlamaz.
+
+İkinci notebook'un açıklamaları, hedef anlamı ve teslim şartları
+[veri hazırlama raporundadır](docs/data_preparation.md). Hazırlık HTML görünümü
+`reports/data_preparation.html` dosyasıdır. Şemaya uygun modül henüz API'nin
+eski beş özellikli extractor'ının yerine bağlanmadı.
+
+İkinci notebook'un 6–7. bölümleri EDA bulgularının her birini öncesi/sonrası
+ve durum tablosuyla izler. `reports/data_preparation/finding_status.csv`
+uygulananları, işlem gerektirmeyenleri ve çözülmemiş/kapsam dışı konuları
+ayırır. “Orijinal 56 sütunun tamamı düzeltildi” iddiası yoktur.
 
 ```powershell
 python -m pip install -r requirements-eda.txt

@@ -1,0 +1,45 @@
+{
+  "schema": "url_lexical_v1",
+  "source_rows": 235795,
+  "output_rows": 235370,
+  "duplicate_rows_mapped": 425,
+  "quarantined_rows": 0,
+  "feature_names": [
+    "url_length",
+    "hostname_length",
+    "has_at_symbol",
+    "has_dash",
+    "count_dots",
+    "has_https",
+    "digit_count",
+    "digit_ratio",
+    "path_length",
+    "query_length",
+    "count_query_parameters",
+    "count_percent_escapes",
+    "hostname_is_ip",
+    "has_explicit_port"
+  ],
+  "target": "is_phishing: 1 phishing, 0 legitimate",
+  "dedup_policy": "exact URL; first source row; original partition preserved",
+  "source_sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+  "manifest_sha256": "70dc8fcb656c63aa5d87e8dafcff50a00aac6d9b4f84dda256f2c1994847ce4e",
+  "extractor_sha256": "52636171fdc1670c7a796a2e69c41500b605ef39f48e4d0457df31571d69cf7a",
+  "preparation_sha256": "e558a1f91daa9546fab4fa5ca6e827af4ff47f9bb2d6ef9385d07bb6161dc480",
+  "output_sha256": {
+    "features.csv": "a8b0f225783d90c54fa2194c6ac4453f3cbca10e07829d2be679c1dde8ed5d7a",
+    "target.csv": "3dac9e5d9d8320362118e2e83204b9a3ded392afc7115546dee79517ab5b2d98",
+    "metadata.csv": "e1b12e2c74e9945067263174d6e5339ecfbf83dc9e69bbc6b953858a7f79db2b",
+    "source_mapping.csv": "fee206fe5132e713756461e31c326fdd313e6f0236d391e047004f4111a30795",
+    "quarantine.csv": "f699a163a5c493e19c8b073c172284080d00e1f13a856bd5c420cbf619c0143b"
+  },
+  "environment": {
+    "python": "3.12.10",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  },
+  "learned_preprocessing": false,
+  "api_modified": false,
+  "row_key": "source_row is metadata/index, never a predictor",
+  "invalid_input_policy": "Quarantine with reason; conflicting labels/splits stop run"
+}
