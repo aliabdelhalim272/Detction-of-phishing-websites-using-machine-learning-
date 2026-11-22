@@ -1,0 +1,63 @@
+{
+  "scope": "Academic course project; no ZIP generated",
+  "group_members": [
+    {
+      "name": "Meltem Orhan",
+      "student_id": "221015002"
+    },
+    {
+      "name": "Ali Abdel Halim",
+      "student_id": null
+    },
+    {
+      "name": "Halil Trabzon",
+      "student_id": null
+    }
+  ],
+  "group_number": null,
+  "pending_before_submission": [
+    "Assigned group number",
+    "Ali Abdel Halim student ID",
+    "Halil Trabzon student ID"
+  ],
+  "notebook_checks": {
+    "full_execution": "PASS",
+    "executed_code_cells": 48,
+    "embedded_figures": 22,
+    "test_results_reproduced": "PASS",
+    "English_sources_and_outputs": "PASS"
+  },
+  "requirements": {
+    "dataset_and_attribution": "Notebook 2, README, report 1",
+    "data_dictionary": "Notebook 3, report Appendix A (all 56 columns)",
+    "research_question_hypothesis": "Notebook 1 and 15, report 1 and 5",
+    "EDA_at_least_five_visualizations": "Notebook 7-11; 22 saved image outputs overall",
+    "missing_values": "Notebook 4, report 2; no imputation needed",
+    "descriptive_statistical_analysis": "Notebook 7-10 and 15",
+    "justified_preprocessing": "Notebook 12-14, report 6",
+    "two_classification_models": "Notebook 16: Logistic Regression and Random Forest, plus baseline",
+    "confusion_matrices_metrics_comparison": "Notebook 16-18, report 8",
+    "interpretation_leakage_imbalance_bias": "Notebook 6, 11, 16-20; report 3 and 9",
+    "English_conclusion_ethics_references": "Notebook 19-21; report 9-10 and References",
+    "English_presentation_8_to_12_minutes": "presentation/; 12 slides, target 650 seconds, all three members"
+  },
+  "submission_files": {
+    "GroupXX_Project.ipynb": {
+      "bytes": 2651213,
+      "sha256": "3a2bc35ab2d17857d9fc1f5b00095a773a3edf58a076a9b46288784126d92cd3"
+    },
+    "GroupXX_Report.pdf": {
+      "bytes": 574261,
+      "sha256": "6eba3140e2c563300f536ead6f67181ab57366a0c7af01f43399db76c87376f1"
+    },
+    "dataset.csv": {
+      "bytes": 56854345,
+      "sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6"
+    },
+    "README.txt": {
+      "bytes": 4560,
+      "sha256": "fdcd844803f0893e9bccb21281d2588edb5a728caaef7660414fb455db5b1cd6"
+    }
+  },
+  "delivery_content": "Only these four files are required; data/ and reports/ created by Run All are generated outputs."
+}

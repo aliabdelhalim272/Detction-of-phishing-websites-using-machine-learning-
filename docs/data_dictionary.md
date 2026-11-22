@@ -104,6 +104,6 @@ CSV'ye birebir uygunluk kanıtı olarak değerlendirilmez.
 ## Kullanım sınırı
 
 Bu sözlük bir özellik seçimi listesi değildir. Bir özelliğin anlamı makul olsa
-bile canlıda aynı şekilde üretilebilmesi, referans veri kullanımı ve etiket
+bile ölçüm tanımının doğruluğu, referans veri kullanımı ve etiket
 sızıntısı ayrıca incelenir. CSV üzerinde sonraki formül kontrolleri eğitim
 kayıtlarında yapılmalı; test dağılımları karar üretmek için kullanılmamalıdır.

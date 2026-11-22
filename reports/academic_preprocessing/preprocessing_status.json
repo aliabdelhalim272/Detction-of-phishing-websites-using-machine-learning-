@@ -1,0 +1,19 @@
+{
+  "stage": "training_fitted_transformations_ready; models_not_fitted",
+  "training_rows": 141254,
+  "numeric_predictors": 47,
+  "training_TLD_categories": 594,
+  "encoded_predictors": 641,
+  "fit_partitions": [
+    "train"
+  ],
+  "holdout_operation": "transform only",
+  "linear_numeric_transform": "StandardScaler",
+  "tree_numeric_transform": "passthrough",
+  "categorical_transform": "OneHotEncoder(handle_unknown=ignore)",
+  "imputation_applied": false,
+  "clipping_applied": false,
+  "classifier_fitted": false,
+  "hypothesis_test_performed": false,
+  "source_sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6"
+}

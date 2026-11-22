@@ -1,0 +1,4 @@
+partition,rows,numeric_predictors,categorical_predictors,total_predictors_before_encoding
+train,141254,47,1,48
+validation,46958,47,1,48
+test,47583,47,1,48

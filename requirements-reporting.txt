@@ -1,0 +1,4 @@
+# Optional document-generation tools; not needed to run the submitted notebook.
+reportlab==5.1.0
+python-pptx==1.0.2
+pymupdf==2.1

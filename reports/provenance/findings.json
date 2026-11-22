@@ -27,12 +27,5 @@
       "mismatches": 0
     }
   ],
-  "backend_feature_keys": [
-    "url_length",
-    "has_at_symbol",
-    "has_dash",
-    "count_dots",
-    "has_https"
-  ],
-  "policy": "Read-only provenance review; no features removed, rewritten or deployed."
+  "policy": "Read-only provenance review; no features removed or rewritten."
 }

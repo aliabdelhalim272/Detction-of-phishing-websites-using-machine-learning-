@@ -1,0 +1,7 @@
+branch,partition,rows,encoded_predictors,format
+linear,train,141254,641,sparse
+linear,validation,46958,641,sparse
+linear,test,47583,641,sparse
+tree,train,141254,641,sparse
+tree,validation,46958,641,sparse
+tree,test,47583,641,sparse

@@ -1,0 +1,26 @@
+{
+  "test_evaluated": true,
+  "protocol_sha256": "c2da7a10ab9eaec1bf130a69b4145209b156c651b41f6bd0f7562328c42344f2",
+  "primary_candidate_before_and_after_test": "Reduced Random Forest",
+  "test_rows": 47583,
+  "positive_test_rows": 20561,
+  "threshold": 0.5,
+  "model_refit_during_test": false,
+  "model_state_unchanged_by_prediction": true,
+  "post_test_tuning": false,
+  "external_evaluation": false,
+  "primary_metrics": {
+    "Accuracy": 0.9998949204547842,
+    "Precision (phishing)": 0.9999027237354086,
+    "Recall (phishing)": 0.9998540926997714,
+    "F1 (phishing)": 0.9998784076262737,
+    "Balanced accuracy": 0.9998900394666055,
+    "ROC-AUC": 0.9999999748019859,
+    "Average precision": 0.9999999668876658
+  },
+  "primary_errors": {
+    "FP": 2,
+    "FN": 3
+  },
+  "limits": "Internal observed-host-grouped test; prior dataset exposure and campaign/measurement/collection limits remain."
+}

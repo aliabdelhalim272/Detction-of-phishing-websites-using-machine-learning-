@@ -1,0 +1,8 @@
+feature_a,feature_b,inner_training_spearman
+URLLength,NoOfLettersInURL,0.9718064809408441
+HasObfuscation,NoOfObfuscatedChar,0.999999241353494
+HasObfuscation,ObfuscationRatio,0.9999991519020487
+NoOfObfuscatedChar,ObfuscationRatio,0.9999994609091677
+NoOfLettersInURL,LetterRatioInURL,0.9278240409547682
+NoOfDegitsInURL,DegitRatioInURL,0.9972673325064785
+DomainTitleMatchScore,URLTitleMatchScore,0.9704800015209275

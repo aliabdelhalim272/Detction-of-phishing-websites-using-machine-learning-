@@ -1,0 +1,20 @@
+{
+  "variable": "Recorded URLLength",
+  "scope": "One randomly selected observation per training hostname",
+  "training_host_representatives": 132045,
+  "phishing_rows": 51271,
+  "legitimate_rows": 80774,
+  "KS_D": 0.37825575463806504,
+  "permutation_p_estimate": 0.0005,
+  "permutations": 1999,
+  "at_least_as_extreme": 0,
+  "minimum_reportable_p": 0.0005,
+  "alpha": 0.05,
+  "seed": 20261121,
+  "decision": "Reject H0 under the exploratory exchangeability assumptions",
+  "median_difference_phishing_minus_legitimate": 6.0,
+  "rank_effect_phishing_minus_legitimate": 0.40081281857860196,
+  "exploratory_post_EDA": true,
+  "external_confirmation": false,
+  "limitations": "Observed-host representatives may remain dependent by registered domain/campaign; recorded feature definition is uncertain."
+}
