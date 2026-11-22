@@ -1,0 +1,41 @@
+{
+  "training_rows": 141254,
+  "numeric_predictor_candidates": 50,
+  "constant_numeric_columns": [],
+  "binary_numeric_columns": [
+    "IsDomainIP",
+    "HasObfuscation",
+    "IsHTTPS",
+    "HasTitle",
+    "HasFavicon",
+    "Robots",
+    "IsResponsive",
+    "NoOfURLRedirect",
+    "NoOfSelfRedirect",
+    "HasDescription",
+    "HasExternalFormSubmit",
+    "HasSocialNet",
+    "HasSubmitButton",
+    "HasHiddenFields",
+    "HasPasswordField",
+    "Bank",
+    "Pay",
+    "Crypto",
+    "HasCopyrightInfo"
+  ],
+  "columns_at_least_95_percent_zero": [
+    "IsDomainIP",
+    "HasObfuscation",
+    "NoOfObfuscatedChar",
+    "ObfuscationRatio",
+    "NoOfEqualsInURL",
+    "NoOfQMarkInURL",
+    "NoOfAmpersandInURL",
+    "NoOfSelfRedirect",
+    "HasExternalFormSubmit",
+    "Crypto"
+  ],
+  "tld_unique": 594,
+  "tld_top_15_row_percent": 77.7903634587339,
+  "policy": "Training descriptive analysis only; no cleaning or feature selection."
+}

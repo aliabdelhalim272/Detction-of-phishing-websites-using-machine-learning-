@@ -1,0 +1,57 @@
+column,role,action,rationale
+FILENAME,Metadata only,Exclude from X; retain for audit/group checks,Avoid source/identity memorization; preserve traceability.
+URL,Metadata only,Exclude from X; retain for audit/group checks,Avoid source/identity memorization; preserve traceability.
+URLLength,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+Domain,Metadata only,Exclude from X; retain for audit/group checks,Avoid source/identity memorization; preserve traceability.
+DomainLength,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+IsDomainIP,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+TLD,Categorical predictor,Retain; training-fitted encoding is pending,Recorded category; do not learn categories or selection rules from holdouts.
+URLSimilarityIndex,Excluded reference score,Exclude from the primary experiment,"Reference population, label use and computation time are not fully established; leakage is not proven."
+CharContinuationRate,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+TLDLegitimateProb,Excluded reference score,Exclude from the primary experiment,"Reference population, label use and computation time are not fully established; leakage is not proven."
+URLCharProb,Excluded reference score,Exclude from the primary experiment,"Reference population, label use and computation time are not fully established; leakage is not proven."
+TLDLength,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfSubDomain,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasObfuscation,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfObfuscatedChar,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+ObfuscationRatio,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfLettersInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+LetterRatioInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfDegitsInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+DegitRatioInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfEqualsInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfQMarkInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfAmpersandInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfOtherSpecialCharsInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+SpacialCharRatioInURL,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+IsHTTPS,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+LineOfCode,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+LargestLineLength,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasTitle,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+Title,Excluded raw text,Exclude from the first experiment,Raw title requires a separate text-processing design.
+DomainTitleMatchScore,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+URLTitleMatchScore,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasFavicon,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+Robots,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+IsResponsive,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfURLRedirect,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfSelfRedirect,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasDescription,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfPopup,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfiFrame,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasExternalFormSubmit,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasSocialNet,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasSubmitButton,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasHiddenFields,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasPasswordField,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+Bank,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+Pay,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+Crypto,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+HasCopyrightInfo,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfImage,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfCSS,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfJS,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfSelfRef,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfEmptyRef,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+NoOfExternalRef,Numeric predictor,Retain recorded values; scaling depends on model,No constant numeric column or verified correction rule justified removal; measurement caveats remain.
+label,Target only,Recode to is_phishing = 1 - label; exclude from X,Positive class must consistently mean phishing.

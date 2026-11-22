@@ -1,0 +1,49 @@
+feature,selected,component_representative,reason
+URLLength,False,NoOfLettersInURL,Screened in favor of component representative: NoOfLettersInURL
+DomainLength,True,DomainLength,Selected component representative within fixed budget
+IsDomainIP,False,IsDomainIP,Below fixed representative budget
+TLD,False,TLD,Below fixed representative budget
+CharContinuationRate,True,CharContinuationRate,Selected component representative within fixed budget
+TLDLength,False,TLDLength,Below fixed representative budget
+NoOfSubDomain,True,NoOfSubDomain,Selected component representative within fixed budget
+HasObfuscation,False,HasObfuscation,Below fixed representative budget
+NoOfObfuscatedChar,False,HasObfuscation,Screened in favor of component representative: HasObfuscation
+ObfuscationRatio,False,HasObfuscation,Screened in favor of component representative: HasObfuscation
+NoOfLettersInURL,True,NoOfLettersInURL,Selected component representative within fixed budget
+LetterRatioInURL,False,NoOfLettersInURL,Screened in favor of component representative: NoOfLettersInURL
+NoOfDegitsInURL,False,DegitRatioInURL,Screened in favor of component representative: DegitRatioInURL
+DegitRatioInURL,True,DegitRatioInURL,Selected component representative within fixed budget
+NoOfEqualsInURL,False,NoOfEqualsInURL,Below fixed representative budget
+NoOfQMarkInURL,False,NoOfQMarkInURL,Below fixed representative budget
+NoOfAmpersandInURL,False,NoOfAmpersandInURL,Below fixed representative budget
+NoOfOtherSpecialCharsInURL,True,NoOfOtherSpecialCharsInURL,Selected component representative within fixed budget
+SpacialCharRatioInURL,False,SpacialCharRatioInURL,Below fixed representative budget
+IsHTTPS,True,IsHTTPS,Selected component representative within fixed budget
+LineOfCode,True,LineOfCode,Selected component representative within fixed budget
+LargestLineLength,True,LargestLineLength,Selected component representative within fixed budget
+HasTitle,False,HasTitle,Below fixed representative budget
+DomainTitleMatchScore,True,DomainTitleMatchScore,Selected component representative within fixed budget
+URLTitleMatchScore,False,DomainTitleMatchScore,Screened in favor of component representative: DomainTitleMatchScore
+HasFavicon,True,HasFavicon,Selected component representative within fixed budget
+Robots,False,Robots,Below fixed representative budget
+IsResponsive,False,IsResponsive,Below fixed representative budget
+NoOfURLRedirect,False,NoOfURLRedirect,Below fixed representative budget
+NoOfSelfRedirect,False,NoOfSelfRedirect,Below fixed representative budget
+HasDescription,True,HasDescription,Selected component representative within fixed budget
+NoOfPopup,False,NoOfPopup,Below fixed representative budget
+NoOfiFrame,False,NoOfiFrame,Below fixed representative budget
+HasExternalFormSubmit,True,HasExternalFormSubmit,Selected component representative within fixed budget
+HasSocialNet,True,HasSocialNet,Selected component representative within fixed budget
+HasSubmitButton,False,HasSubmitButton,Below fixed representative budget
+HasHiddenFields,False,HasHiddenFields,Below fixed representative budget
+HasPasswordField,False,HasPasswordField,Below fixed representative budget
+Bank,True,Bank,Selected component representative within fixed budget
+Pay,False,Pay,Below fixed representative budget
+Crypto,True,Crypto,Selected component representative within fixed budget
+HasCopyrightInfo,True,HasCopyrightInfo,Selected component representative within fixed budget
+NoOfImage,True,NoOfImage,Selected component representative within fixed budget
+NoOfCSS,False,NoOfCSS,Below fixed representative budget
+NoOfJS,False,NoOfJS,Below fixed representative budget
+NoOfSelfRef,True,NoOfSelfRef,Selected component representative within fixed budget
+NoOfEmptyRef,False,NoOfEmptyRef,Below fixed representative budget
+NoOfExternalRef,True,NoOfExternalRef,Selected component representative within fixed budget

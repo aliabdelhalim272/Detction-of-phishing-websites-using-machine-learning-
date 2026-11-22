@@ -1,0 +1,61 @@
+{
+  "execution": "PASS",
+  "executed_code_cells": 48,
+  "embedded_figures": 22,
+  "pdf_checks": {
+    "GroupXX_Report.pdf": {
+      "pages": 16,
+      "words_per_page": [
+        180,
+        274,
+        251,
+        230,
+        169,
+        141,
+        155,
+        213,
+        284,
+        172,
+        326,
+        199,
+        334,
+        242,
+        192,
+        175
+      ]
+    },
+    "GroupXX_Presentation.pdf": {
+      "pages": 12,
+      "words_per_page": [
+        50,
+        60,
+        63,
+        58,
+        61,
+        58,
+        60,
+        53,
+        67,
+        89,
+        57,
+        59
+      ]
+    },
+    "GroupXX_SpeakerNotes.pdf": {
+      "pages": 5,
+      "words_per_page": [
+        361,
+        487,
+        424,
+        324,
+        117
+      ]
+    }
+  },
+  "presentation": {
+    "slides": 12,
+    "notes": 12,
+    "target_seconds": 650,
+    "members_speaking": 3
+  }
+}

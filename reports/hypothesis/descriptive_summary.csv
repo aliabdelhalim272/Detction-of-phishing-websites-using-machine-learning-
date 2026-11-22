@@ -1,0 +1,5 @@
+sample,class,rows,mean,q1,median,q3,p95
+All training observations,Legitimate,80787,26.227066235904292,23.0,26.0,29.0,35.0
+All training observations,Phishing,60467,45.70160583458746,26.0,34.0,48.0,97.0
+One observation per training host,Legitimate,80774,26.2275237081239,23.0,26.0,29.0,35.0
+One observation per training host,Phishing,51271,39.020732967954594,25.0,32.0,43.0,80.0

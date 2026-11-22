@@ -1,0 +1,15 @@
+check,flagged_rows,flagged_percent,status
+URLLength <= 0,0,0.0,Candidate rule; source formula not fully verified
+DomainLength <= 0,0,0.0,Candidate rule; source formula not fully verified
+TLDLength <= 0,0,0.0,Candidate rule; source formula not fully verified
+"CharContinuationRate outside [0,1]",0,0.0,Candidate rule; source formula not fully verified
+"ObfuscationRatio outside [0,1]",0,0.0,Candidate rule; source formula not fully verified
+"LetterRatioInURL outside [0,1]",0,0.0,Candidate rule; source formula not fully verified
+"DegitRatioInURL outside [0,1]",0,0.0,Candidate rule; source formula not fully verified
+"SpacialCharRatioInURL outside [0,1]",0,0.0,Candidate rule; source formula not fully verified
+"TLDLegitimateProb outside [0,1]",0,0.0,Candidate rule; source formula not fully verified
+"URLCharProb outside [0,1]",0,0.0,Candidate rule; source formula not fully verified
+HasObfuscation=0 but count>0,0,0.0,Candidate rule; source formula not fully verified
+HasObfuscation=1 but count=0,0,0.0,Candidate rule; source formula not fully verified
+ObfuscationRatio>0 but count=0,0,0.0,Candidate rule; source formula not fully verified
+ObfuscationRatio=0 but count>0,0,0.0,Candidate rule; source formula not fully verified

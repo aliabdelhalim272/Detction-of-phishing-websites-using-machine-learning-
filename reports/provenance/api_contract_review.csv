@@ -1,0 +1,8 @@
+topic,observation,consequence
+Feature schema,API has 5 lexical keys; dataset has 50 numeric feature candidates plus categorical/text fields.,Direct model plug-in is not valid without an explicit shared contract.
+url_length,API uses len(url); recorded URLLength often differs (section 6.2).,Same-name mapping would silently change the measurement.
+has_https,"API uses case-sensitive startswith(""https""), not parsed HTTP(S) scheme.",Validation and scheme normalization must be defined in shared extraction.
+Target encoding,Backend treats prediction 1 as phishing; source label 1 is legitimate.,Role 2 must explicitly recode target or adapt serving interpretation.
+Fallback,"When model is absent, heuristic words/dash produce a prediction and fixed confidence values.",These values are not measured model probabilities or calibrated confidence.
+Content features,Current extractor does not retrieve page content or redirects.,Content-dependent training features are unavailable to this extractor.
+Model artifact,False,File presence is not a model validity or feature-parity check.

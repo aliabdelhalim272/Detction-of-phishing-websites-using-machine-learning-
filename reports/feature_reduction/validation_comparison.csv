@@ -1,0 +1,3 @@
+Candidate,Accuracy,Precision (phishing),Recall (phishing),F1 (phishing),Balanced accuracy,False alarms (FP),Missed phishing (FN),Detected phishing (TP),Correct legitimate (TN),Fit seconds,Original predictors,Encoded predictors
+Full Random Forest,0.9996379743600664,0.9999497537935886,0.999196666164583,0.9995730681333032,0.9995798426418492,1.0,16.0,19901.0,27040.0,29.049193100072443,48,641
+Reduced Random Forest,0.9998296349929724,0.999849359779061,0.9997489581764322,0.9997991564571199,0.9998190077668891,3.0,5.0,19912.0,27038.0,11.856518100015819,20,20

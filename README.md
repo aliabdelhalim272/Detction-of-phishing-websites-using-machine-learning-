@@ -1,24 +1,68 @@
-# Detction-of-phishing-websites-using-machine-learning-
-An end-to-end Machine Learning system designed to detect phishing websites by analyzing URL features, powered by a real-time Backend API for instant URL scanning.
-# 🛡️ Detection of Phishing Websites using Machine Learning
+# Detection of Phishing Websites Using Machine Learning
 
-## 📖 About The Project
-This is a graduation project focused on cybersecurity and artificial intelligence. The system is designed to detect phishing URLs using Machine Learning algorithms. By extracting specific numerical and structural features from a given URL, our ML model classifies the link as either **Phishing (Malicious)** or **Legitimate (Safe)**.
+This repository contains the academic course project using the PhiUSIIL dataset.
+The main experiment follows source checks, training-only EDA, justified preprocessing,
+an exploratory hypothesis, classification, one feature-reduction experiment and
+a frozen internal test comparison. Earlier dataset exposure and remaining collection
+and campaign dependencies are documented alongside the scores.
 
-## 👥 Team Members & Roles
-1. **Meltem Orhan** - Data & Feature Engineer
-2. **Halil Trabzon** - AI & ML Model Engineer
-3. **Aly Abdelhalim** - Backend & Integration Engineer
+## Start here
 
-## 🏗️ System Architecture
-The project is divided into three main pipelines:
-* **Data Pipeline:** Data collection, cleaning, and feature extraction (URL-based, Domain-based, and Page-based features).
-* **ML Pipeline:** Training and hyperparameter tuning of classification models (e.g., Random Forest, SVM).
-* **Backend & Integration:** A RESTful API built to serve the trained ML model and handle incoming URL scan requests.
+- [Complete English notebook](notebooks/01_eda.ipynb), with all saved outputs.
+- [Browser view of the notebook](reports/eda.html).
+- [Four-file submission folder](submission/GroupXX_PhishingDetection/).
+- [English report](submission/GroupXX_PhishingDetection/GroupXX_Report.pdf).
+- [Presentation](presentation/GroupXX_Presentation.pptx), 12 slides with speaker notes.
+- [Presentation PDF](presentation/GroupXX_Presentation.pdf).
+- [Timed speaking guide and questions](presentation/GroupXX_SpeakerNotes.pdf).
+- [Submission verification and requirement mapping](reports/submission_validation/checklist.json).
 
-## 📁 Repository Structure
-* `data/`: Contains raw and processed data (Note: Large datasets are ignored by git).
-* `notebooks/`: Jupyter notebooks for data exploration and model training.
-* `src/`: Source code for feature extraction and the backend API.
-* `models/`: Exported trained ML models.
-* `docs/`: Project documentation and API specs.
+The presentation targets 10 minutes 50 seconds, with speaking parts for all three members.
+No ZIP has been created. Before submission, replace GroupXX and complete Ali Abdel Halim's
+and Halil Trabzon's student IDs. Meltem Orhan's ID is 221015002.
+
+## Run the analysis
+
+Use Python 3.12.10 and install the pinned environment:
+
+```powershell
+python -m pip install -r requirements-eda.txt
+```
+
+Select that Python environment as the notebook kernel, restart and Run All.
+In the repository, the notebook reads `data/raw/PhiUSIIL_Phishing_URL_Dataset.csv`.
+The standalone submitted copy reads `dataset.csv` beside it and embeds the dictionary
+and frozen configuration; it needs no repository source modules or existing outputs.
+Both create split/audit outputs under `data/processed/` and `reports/` as needed.
+The submitted README.txt contains complete installation and execution instructions.
+
+## Dataset and evaluation
+
+PhiUSIIL Phishing URL (Website), Arvind Prasad and Shalini Chandra (2024),
+[UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/967/phiusiil%2Bphishing%2Burl%2Bdataset),
+CC BY 4.0. The original dataset contains 235,795 rows and 56 columns.
+Source labels: 0 phishing, 1 legitimate; model target: 1 phishing.
+[English variable dictionary](docs/data_dictionary_en.md) documents all 56 fields and evidence caveats.
+
+Observed hosts are kept together in fixed training/validation/test partitions.
+All source observations are retained in this academic experiment, including repeated
+URLs with different recorded measurements. Transformations fit on training only.
+Forty-eight original predictors are compared with one reduced 20-predictor forest.
+The reduced forest was selected on validation and frozen at threshold 0.5 before test scoring.
+
+The selected model made 2 false alarms and 3 missed phishing observations on 47,583
+internal test rows (phishing F1 99.9878%). These results do not establish external,
+temporal or campaign-independent performance. See notebook Sections 18-21 for limitations.
+Small reproducible summaries are kept under `reports/`; source and large generated
+CSV files remain excluded from Git. The local submission contains the actual dataset.
+
+## Supporting files
+
+`src/reporting/` contains preparation, execution, document-generation and checking scripts.
+`requirements-reporting.txt` lists optional PDF/PowerPoint build dependencies; these
+are not needed to run the notebook. The document builders use an isolated
+`../.delivery-tools/` installation. Generating the submission notebook clears its
+outputs, so run the validation script afterwards before submitting.
+
+Other pre-existing notebooks and modules remain separate from the academic submission.
+`notebooks/01_eda.ipynb` and the four-file folder above define the current course project.

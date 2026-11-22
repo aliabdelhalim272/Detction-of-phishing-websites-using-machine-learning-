@@ -1,0 +1,8 @@
+{
+  "training_rows": 141254,
+  "numeric_features": 50,
+  "pairs_checked": 1225,
+  "pairs_with_abs_correlation_at_least_point9": 7,
+  "exact_or_complement_pairs": [],
+  "policy": "No automatic feature removal; all calculations use training data only."
+}

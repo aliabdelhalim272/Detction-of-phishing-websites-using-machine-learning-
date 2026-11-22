@@ -1,0 +1,11 @@
+{
+  "backend_sha256": "9ebba6aba76858f7335c44b44b798040b1925c0a657a0226c327aad19d54be76",
+  "feature_keys": [
+    "url_length",
+    "has_at_symbol",
+    "has_dash",
+    "count_dots",
+    "has_https"
+  ],
+  "method": "Static AST/source review; no backend execution or modification."
+}

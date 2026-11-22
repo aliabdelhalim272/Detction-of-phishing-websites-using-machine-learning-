@@ -1,0 +1,57 @@
+column,dtype,missing,unique,role
+FILENAME,str,0,235795,identifier/text/group candidate
+URL,str,0,235370,identifier/text/group candidate
+URLLength,int64,0,482,recorded feature; formula to verify
+Domain,str,0,220086,identifier/text/group candidate
+DomainLength,int64,0,101,recorded feature; formula to verify
+IsDomainIP,int64,0,2,recorded feature; formula to verify
+TLD,str,0,695,identifier/text/group candidate
+URLSimilarityIndex,float64,0,36360,recorded feature; formula to verify
+CharContinuationRate,float64,0,898,recorded feature; formula to verify
+TLDLegitimateProb,float64,0,465,recorded feature; formula to verify
+URLCharProb,float64,0,227421,recorded feature; formula to verify
+TLDLength,int64,0,12,recorded feature; formula to verify
+NoOfSubDomain,int64,0,10,recorded feature; formula to verify
+HasObfuscation,int64,0,2,recorded feature; formula to verify
+NoOfObfuscatedChar,int64,0,20,recorded feature; formula to verify
+ObfuscationRatio,float64,0,146,recorded feature; formula to verify
+NoOfLettersInURL,int64,0,421,recorded feature; formula to verify
+LetterRatioInURL,float64,0,709,recorded feature; formula to verify
+NoOfDegitsInURL,int64,0,182,recorded feature; formula to verify
+DegitRatioInURL,float64,0,575,recorded feature; formula to verify
+NoOfEqualsInURL,int64,0,25,recorded feature; formula to verify
+NoOfQMarkInURL,int64,0,5,recorded feature; formula to verify
+NoOfAmpersandInURL,int64,0,31,recorded feature; formula to verify
+NoOfOtherSpecialCharsInURL,int64,0,74,recorded feature; formula to verify
+SpacialCharRatioInURL,float64,0,240,recorded feature; formula to verify
+IsHTTPS,int64,0,2,recorded feature; formula to verify
+LineOfCode,int64,0,10738,recorded feature; formula to verify
+LargestLineLength,int64,0,26181,recorded feature; formula to verify
+HasTitle,int64,0,2,recorded feature; formula to verify
+Title,str,0,197874,identifier/text/group candidate
+DomainTitleMatchScore,float64,0,152,recorded feature; formula to verify
+URLTitleMatchScore,float64,0,497,recorded feature; formula to verify
+HasFavicon,int64,0,2,recorded feature; formula to verify
+Robots,int64,0,2,recorded feature; formula to verify
+IsResponsive,int64,0,2,recorded feature; formula to verify
+NoOfURLRedirect,int64,0,2,recorded feature; formula to verify
+NoOfSelfRedirect,int64,0,2,recorded feature; formula to verify
+HasDescription,int64,0,2,recorded feature; formula to verify
+NoOfPopup,int64,0,115,recorded feature; formula to verify
+NoOfiFrame,int64,0,119,recorded feature; formula to verify
+HasExternalFormSubmit,int64,0,2,recorded feature; formula to verify
+HasSocialNet,int64,0,2,recorded feature; formula to verify
+HasSubmitButton,int64,0,2,recorded feature; formula to verify
+HasHiddenFields,int64,0,2,recorded feature; formula to verify
+HasPasswordField,int64,0,2,recorded feature; formula to verify
+Bank,int64,0,2,recorded feature; formula to verify
+Pay,int64,0,2,recorded feature; formula to verify
+Crypto,int64,0,2,recorded feature; formula to verify
+HasCopyrightInfo,int64,0,2,recorded feature; formula to verify
+NoOfImage,int64,0,992,recorded feature; formula to verify
+NoOfCSS,int64,0,209,recorded feature; formula to verify
+NoOfJS,int64,0,253,recorded feature; formula to verify
+NoOfSelfRef,int64,0,1374,recorded feature; formula to verify
+NoOfEmptyRef,int64,0,296,recorded feature; formula to verify
+NoOfExternalRef,int64,0,1191,recorded feature; formula to verify
+label,int64,0,2,target

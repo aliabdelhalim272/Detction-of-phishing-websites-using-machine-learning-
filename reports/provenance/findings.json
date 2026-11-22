@@ -1,0 +1,31 @@
+{
+  "training_rows": 141254,
+  "inventory_columns": 56,
+  "family_counts": {
+    "page_or_behavior_candidate": 28,
+    "url_derived_candidate": 20,
+    "reference_score": 3,
+    "identifier": 1,
+    "raw_input": 1,
+    "group_metadata": 1,
+    "raw_page_text": 1,
+    "target": 1
+  },
+  "reference_features_requiring_evidence": [
+    "TLDLegitimateProb",
+    "URLCharProb",
+    "URLSimilarityIndex"
+  ],
+  "direct_target_copy_features": [],
+  "https_rule_mismatches": [
+    {
+      "rule": "parsed_scheme_is_https",
+      "mismatches": 271
+    },
+    {
+      "rule": "substring_https_anywhere",
+      "mismatches": 0
+    }
+  ],
+  "policy": "Read-only provenance review; no features removed or rewritten."
+}

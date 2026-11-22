@@ -1,0 +1,19 @@
+{
+  "training_rows": 141254,
+  "class_counts": [
+    {
+      "class": "Legitimate",
+      "rows": 80787,
+      "percent": 57.192716666430684
+    },
+    {
+      "class": "Phishing",
+      "rows": 60467,
+      "percent": 42.807283333569316
+    }
+  ],
+  "binary_features_reviewed": 19,
+  "other_numeric_features_reviewed": 31,
+  "host_weighting": "Each parsed hostname has total weight 1; descriptive sensitivity only.",
+  "policy": "No significance claim, no feature selection or training transformation."
+}

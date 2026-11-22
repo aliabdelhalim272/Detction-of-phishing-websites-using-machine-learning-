@@ -205,3 +205,29 @@ data/processed/*
 
 # 3. OS generated files
 .DS_Store
+
+# Local Python environments and notebook state
+.venv/
+.venv-analysis/
+.ipynb_checkpoints/
+
+# Small, reproducible audit tables; datasets remain ignored.
+!/reports/initial_audit/*.csv
+!/reports/consistency_audit/*.csv
+!/reports/distributions/*.csv
+!/reports/outliers/*.csv
+!/reports/target_relationships/*.csv
+!/reports/feature_relationships/*.csv
+!/reports/provenance/*.csv
+!/reports/preparation_plan/*.csv
+!/reports/data_preparation/*.csv
+!/reports/academic_preprocessing/*.csv
+!/reports/hypothesis/*.csv
+!/reports/model_validation/*.csv
+!/reports/feature_reduction/*.csv
+!/reports/final_evaluation/*.csv
+
+# Local rendering previews and generated standalone-run folders.
+/reports/submission_validation/*.png
+/submission/**/data/
+/submission/**/reports/

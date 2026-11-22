@@ -1,0 +1,24 @@
+{
+  "training_source_rows_reviewed": 141254,
+  "retained_training_rows": 141001,
+  "domain": {
+    "mismatching_training_rows": 18,
+    "port_cases": 16,
+    "userinfo_cases": 2,
+    "recorded_domain_equals_netloc_rows": 141254,
+    "new_hostname_group_mismatches": 0
+  },
+  "status_counts": {
+    "applied_verified": 4,
+    "applied_verified_new_contract": 4,
+    "excluded_not_resolved": 4,
+    "no_automatic_edit": 3,
+    "open": 3,
+    "no_action_needed": 1,
+    "diagnostic_only_not_selected": 1,
+    "not_needed_at_this_stage": 1,
+    "not_implemented": 1
+  },
+  "scope": "New lexical contract verified; original 56-column dataset is not universally repaired",
+  "diagnostic_count_fields_are_model_features": false
+}

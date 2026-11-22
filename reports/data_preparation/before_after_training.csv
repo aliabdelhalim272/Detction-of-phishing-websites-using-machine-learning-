@@ -1,0 +1,8 @@
+recorded_field,prepared_field,training_source_rows,old_definition_mismatches,new_definition_mismatches,status
+URLLength,url_length,141254,112331,0,new_contract_verified; original_formula_not_claimed
+IsHTTPS,has_https,141254,271,0,new_contract_verified; original_formula_not_claimed
+NoOfEqualsInURL,[audit only],141254,168,0,diagnostic_recomputed_only; not_a_model_feature
+NoOfQMarkInURL,[audit only],141254,3,0,diagnostic_recomputed_only; not_a_model_feature
+NoOfAmpersandInURL,[audit only],141254,1740,0,diagnostic_recomputed_only; not_a_model_feature
+NoOfDegitsInURL,digit_count,141254,685,0,new_contract_verified; original_formula_not_claimed
+DegitRatioInURL,digit_ratio,141254,29404,0,new_contract_verified; original_formula_not_claimed

@@ -1,0 +1,8 @@
+{
+  "training_rows": 141254,
+  "raw_url_length_mismatches": 112331,
+  "normalized_domain_mismatches": 18,
+  "www_only_domain_mismatches": 0,
+  "https_mismatches": 271,
+  "policy": "Audit only; no values, rows or split assignments changed."
+}

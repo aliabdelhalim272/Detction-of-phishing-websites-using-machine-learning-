@@ -1,0 +1,4 @@
+partition,row_alignment,target_mapping,feature_schema,finite_numeric_values,nonmissing_categories
+train,PASS,PASS,PASS,PASS,PASS
+validation,PASS,PASS,PASS,PASS,PASS
+test,PASS,PASS,PASS,PASS,PASS
